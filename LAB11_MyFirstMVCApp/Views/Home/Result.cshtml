@@ -1,31 +1,58 @@
 ﻿@model List<LAB11_MyFirstMVCApp.Models.TimePerson>
+<link href="~/StyleSheet.css" rel="stylesheet" />
 
-<h1>This is the results page.</h1>
-
-<table>
-    <tr>
-        <th>
-            Year
-        </th>
-        <th>
-            Name
-        </th>
-        <th>
-            Honor
-        </th>
-    </tr>
-@foreach(var person in Model)
-{
-    <tr>
-        <td>
-            @person.Year
-        </td>
-        <td>
-            @person.Name
-        </td>
-        <td>
-            @person.Honor
-        </td>
-    </tr>
-}
-</table>
+<body>
+    <h1>TIME</h1>
+    <h2>Persons of the Year</h2>
+    <table>
+        <tr>
+            <th>
+                Year
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Honor
+            </th>
+            <th>
+                Country
+            </th>
+            <th>
+                Birth Year
+            </th>
+            <th>
+                Death Year
+            </th>
+            <th>
+                Title
+            </th>
+        </tr>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>
+                    @person.Year
+                </td>
+                <td>
+                    @person.Name
+                </td>
+                <td>
+                    @person.Honor
+                </td>
+                <td>
+                    @person.Country
+                </td>
+                <td>
+                    @person.Birth_Year
+                </td>
+                <td>
+                    @person.DeathYear
+                </td>
+                <td>
+                    @person.Title
+                </td>
+            </tr>
+        }
+    </table>
+</body>
